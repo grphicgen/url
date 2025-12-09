@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gallery | GRAPHIC GENIE</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox img {
+  max-width: 80%;
+}
+.lightbox:target {
+  display: flex;
+}
+</style>
+</head>
+<body>
+  <script>
+function openPopup(imgSrc) {
+  document.getElementById("popup-img").src = imgSrc;
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
+<header>
+
+  <div class="logo">
+    <img src="images/logo.jpg" class="logo-circle">
+    <h3>GRAPHIC GENIE</h3>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="container">
+  <div class="title">
+    <h1>Gallery</h1>
+  </div>
+
+ <div class="grids">
+
+  <img class="card" src="images/ga1.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga2.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga3.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga4.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga5.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga6.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga7.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga8.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga9.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga10.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga11.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images/ga12.jpg" onclick="openPopup(this.src)">
+  <img class="card" src="images1/ga1.jpg" onclick="openPopup(this.src)">
+
+
+</div>
+
+</section>
+
+<footer>© 2025 GRAPHIC GENIE</footer>
+
+<div id="popup" class="popup" onclick="closePopup()">
+  <span>&times;</span>
+  <img id="popup-img">
+</div>
+<script>
+function toggleMenu() {
+  document.querySelector(".menu").classList.toggle("active");
+}
+</script>
+
+</body>
+
+</html>
